@@ -1,0 +1,660 @@
+@font-face{
+    font-family: 'dina';
+    src: url('dinas_font/dina_s_handwriting-webfont.woff') format('woff');
+    src: url('dinas_font/dina_s_handwriting-webfont.woff2') format('woff2');
+}
+
+@font-face{
+    font-family: 'cartoonist';
+    src: url('cartoonist_font/sf_cartoonist_hand-webfont.woff') format('woff');
+    src: url('cartoonist_font/sf_cartoonist_hand-webfont.woff2') format('woff2');
+}
+
+*{
+    margin: 0;
+    font-size: 100%;
+    box-sizing: border-box;
+}
+:root{
+    --teal: #256d69;
+    --yellow: #cea83d;
+    --pink: #ce897a;
+    --purple: #52486d;
+    --tan: rgb(247, 243, 230);
+    --gray: #cfdede;
+}
+.filler{
+    background-color: var(--pink);
+}
+
+header{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
+    justify-items: flex-start;
+}
+#header_txt, #header_index{
+    display: grid;
+    grid-template-areas: '#title' '#subtitle';
+}
+#header_txt{
+    padding: 2rem 0 0;
+    border-bottom: 1px solid black;
+}
+
+/* Source Code - http://jsfiddle.net/gaby/9Ryvs/7/ **/
+#tinyflower:hover{
+        -webkit-animation-name: spin;
+        -webkit-animation-duration: 3000ms;
+        -webkit-animation-iteration-count: infinite;
+        -webkit-animation-timing-function: linear;
+        -moz-animation-name: spin;
+        -moz-animation-duration: 3000ms;
+        -moz-animation-iteration-count: infinite;
+        -moz-animation-timing-function: linear;
+        -ms-animation-name: spin;
+        -ms-animation-duration: 3000ms;
+        -ms-animation-iteration-count: infinite;
+        -ms-animation-timing-function: linear;
+        
+        animation-name: spin;
+        animation-duration: 3000ms;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        }
+        @-ms-keyframes spin {
+        from { -ms-transform: rotate(0deg); }
+        to { -ms-transform: rotate(1080deg); }
+        }
+        @-moz-keyframes spin {
+        from { -moz-transform: rotate(0deg); }
+        to { -moz-transform: rotate(1080deg); }
+        }
+        @-webkit-keyframes spin {
+        from { -webkit-transform: rotate(0deg); }
+        to { -webkit-transform: rotate(1080deg); }
+        }
+        @keyframes spin {
+        from {
+            transform:rotate(0deg);
+        }
+        to {
+            transform:rotate(1080deg);
+        }
+}
+
+#title{
+    font-family: dina;
+    width: fit-content;
+    margin: 0 0 0;
+    padding: 0 .75rem .75rem 1rem;
+}
+#subtitle{
+    font-family: dina;
+    width: fit-content;
+    margin: 0 0 0;
+    padding: 0 .75rem .75rem 1rem;
+}
+#1{
+    min-width: 91.033333px;
+}
+.info{
+    display: flex;
+    flex-flow: row;
+    margin: auto 0 auto 4rem;
+    box-sizing: content-box;
+}
+.info, .info_box{
+    width: fit-content;
+    background-color: var(--yellow);
+    border: 1px solid #a98729;
+}
+.info_box{
+    font-family: cartoonist;
+    color: var(--tan);
+    font-size: 1.2rem;
+    padding: .5rem .75rem;
+    height: fit-content;
+    line-height: 1.8rem;
+    text-align: center;
+}
+li{
+    margin: 0 0 1.8rem;
+}
+li:first-child{
+    margin: 2rem 0 1.8rem ;
+}
+#1, #2, #3{
+    height: 4rem;
+    justify-self: center;
+    align-self: center;
+}
+.box{
+    background-color: var(--teal);
+}
+#ingredients{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
+#description{
+    font-family: cartoonist;
+    font-size: 1.5rem;
+    line-height: 1.8rem;
+    width: 90%;
+    margin: 2rem auto;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    padding: 1.5rem;
+}
+#food{
+    background-color: var(--pink);
+    width: 90%;
+    display: block;
+    margin: 2rem auto;
+}
+
+/* HOME PAGE **/
+#whirlies{
+    margin: 1rem 2rem;
+    transform: rotate(-20deg);
+    position: absolute;
+    left: -15px;
+    top: 60px;
+    z-index: -1;
+}
+.recipes{
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.tile{
+    width: 250px;
+    box-shadow: 5px 5px 10px lightgray;
+    margin: 1rem;
+}
+.tile_pic{
+    width: 250px;
+    height: 250px;
+    background-color: var(--pink);
+}
+.tile_txt{
+    font-family: cartoonist;
+}
+.grid{
+    display: grid;
+    grid-template-columns: 20% 80%;
+}
+a{
+    color: black;
+    text-decoration: none;
+}
+#mandala{
+    width: 1.5rem;
+    margin: auto 1rem;
+}
+h7{
+    font-size: 1.8rem;
+    margin: 1rem 0;
+}
+.sub{
+    font-size: 1.25rem;
+    margin: 0 1.25rem;
+    padding: 0 0 1rem;
+}
+#smallteal{
+    width: 100%;
+}
+.search{
+    font-family: cartoonist;
+    font-size: 1.25rem;
+    background-color: var(--gray);
+    padding: .25rem .25rem;
+    border: 1px solid var(--teal);
+    width: 8rem;
+    text-align: right;
+    height: 30px;
+    position: relative;
+    display: inline-block;
+}
+
+option{
+    font-family: cartoonist;
+
+}
+.search{
+    padding: .25rem .75rem;
+    bottom: 2px;
+    right: 5px;
+}
+#button{
+    background-color: var(--gray);
+    padding: .25rem .25rem;
+    border: 1px solid var(--teal);
+    height: 30px;
+    position: relative;
+    display: inline-block;
+    right: 9.5px;
+    bottom: 3px;
+}
+#help{
+    background-color: var(--gray);
+    padding: .25rem .25rem;
+    border: 1px solid var(--teal);
+    height: 30px;
+    width: 25px;
+    text-align: center;
+    font-family: dina;
+    position: absolute;
+    right: 23px;
+    top: 20px;
+    z-index: 5;
+}
+#button:hover, #help:hover{
+    background-color: var(--pink);
+}
+
+  #filter_content{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    max-width: 380px;
+    margin: 2rem 0 2rem 2.8rem;
+  }
+ .filters{
+      padding: .25rem .25rem ;
+      display: block;
+      height: 30px;
+      font-family: cartoonist;
+      font-size: 1.35rem;
+      background-color: transparent;
+      box-shadow: 0;
+      border: none;
+      color: var(--teal);
+  }
+  .filters:hover{
+    color: var(--pink);
+  }
+#nrf_text{
+    font-family: cartoonist;
+    font-size: 1.8rem;
+    margin: 3rem 2rem 0 2rem;
+}
+#nrf_img{
+    width: 80%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+}
+
+/* HELP SCREEN **/
+.help_head{
+    font-family: cartoonist;
+    font-size: 1.5rem;
+    margin: 2rem 2rem 1.2rem;
+}
+.help_head:first-child{
+    margin: 4rem 2rem 1.2rem;
+}
+.help_txt{
+    font-family: cartoonist;
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+}
+.help_txt li{
+    margin: 1.2rem 1rem;
+}
+.help_txt li:last-child{
+    margin: 1.2rem 1rem 3rem;
+}
+#help_main{
+    width: 80%;
+    margin: auto;
+}
+
+/* SMALL **/
+@media screen and (max-width: 330px){
+    br{
+        display: block;
+    }
+}
+@media screen and (max-width: 350px){
+    li, #description{
+        font-size: 1.25rem;
+        line-height: 1.8rem;
+    }
+    .box h2{
+        font-size: 1.75rem;
+    }
+    #description, #food{
+        display: flex;
+    }
+    /*HOME**/
+    #header_index{
+        margin: 2rem 0;
+    }
+    #home_btn{
+        display: none;
+    }
+}
+@media screen and (max-width: 425px){
+    #home_btn{
+        display: none;
+    }
+    #bar{
+        margin: 1rem 1rem 0;
+        height: 3rem;
+    }
+    #filter_content{
+        margin: 2rem 0;
+    }
+}
+@media screen and (max-width: 600px){
+/* RECIPE PAGE **/
+    #largeteal, #medteal{
+        display: none;
+    }
+    main{
+        width: 90%;
+        margin: 1rem auto;
+    }
+    #tinyflower{
+        width: 80px;
+    }
+    #title{
+        font-size: 1.65rem;
+    }
+    #subtitle{
+        font-size: 1rem;
+    }
+    .box{
+        box-shadow: 6px 6px 10px rgb(170, 170, 170);
+        width: 90%;
+        font-family: cartoonist;
+        font-size: 1.5rem;
+        color: var(--tan);
+        padding: 1rem 2rem;
+        line-height: 1.8rem;
+        margin: 0 auto 3rem;
+    }
+    .box h2{
+        font-size: 2rem;
+    }
+    ul {
+        list-style: circle;
+      }
+    #home_button{
+        display: none;
+    }
+    #ingredients{
+        position: initial;
+    }
+
+/* HOME PAGE **/
+      #whirlies{
+          display: none;
+      }
+      #header_index{
+        margin: 2rem 0 0;
+    }
+    #mandala{
+        display: none;
+    }
+    h7{
+        font-family: cartoonist;
+        font-size: 1.37rem;
+        padding: 1rem auto;
+        margin: 1rem .5rem;
+        text-align: center;
+    }
+    .sub{
+        font-size: 1rem;
+    }
+    .grid{
+        display: block;
+    }
+    #help{
+        top: 50px;
+    }
+
+    #nrf_img{
+        width: 80%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 549px){
+    #searchbar{
+        margin: 2rem 4rem 0 1.3rem;
+        height: fit-content;
+    }
+    #help_main{
+        width: 95%;
+    }
+}
+
+
+/* MED **/
+@media screen and (min-width: 550px){
+    #searchbar{
+        position: absolute;
+        right: 15px;
+        top: 100px;
+        z-index: 7;
+    }
+}
+@media screen and (min-width: 600px){
+    #fix_it{
+        margin: 0 2rem 0 0 ;
+        position: relative;
+        max-width: 50%;
+    }
+    #ingredients{
+    box-sizing: border-box;
+    width: auto;
+    }
+}
+@media screen and (min-width: 800px){
+    #fix_it{
+        max-width: 40%;
+        min-width: 30%;
+        margin: 0;
+    }
+
+    #help_main{
+        width: 60%;
+        margin: 10% 7rem 30% 7rem;
+    }
+    #header{
+        margin: 0 auto;
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 800px) {
+    #whirlies{
+        top: 60px;
+        width: 7%;
+        height: 18%;
+    }
+    #boxes{
+        margin: 0 0 4rem;
+    }
+    #instructions{
+        width: 60%;
+    }
+
+}
+@media screen and (min-width: 801px) and (max-width: 1099px) {
+#whirlies{
+    top: 80px;
+    width: 5%;
+    height: 18%;
+    }
+    #boxes{
+        margin: 4rem 0;
+    }
+}
+@media screen and (min-width: 600px) and (max-width: 1099px){
+/* RECIPE PAGE **/
+    #largeteal, #smallteal{
+        display: none;
+    }
+    #medteal{
+        width: 100%;
+    }
+    main{
+        width: 90%;
+        margin: 2rem auto;
+    }
+    #title{
+        font-size: 2rem;
+    }
+    .subtitle{
+        font-size: 1.25rem;
+    }
+    #boxes{
+        display: flex;
+        flex-flow: row;
+        justify-content: space-around;
+    }
+    .box{
+        box-shadow: 6px 6px 10px lightgray;
+        font-family: cartoonist;
+        font-size: 1.5rem;
+        color: var(--tan);
+        padding: 1rem 2rem;
+        line-height: 1.8rem;
+
+    }
+    #instructions{
+        width: 50%;
+    }
+    .box h2{
+        font-size: 2rem;
+    }
+    ul {
+        list-style: circle;
+      }
+    
+    #food{
+        width:70%;
+    }
+    #header_index{
+        margin: 2rem 2rem 0 5rem;
+    }
+
+/* HOME PAGE **/
+
+}
+@media screen and (max-width: 900px){
+    .header{
+        flex-flow: wrap;
+        max-width: 50%;
+    }
+    .info{
+        margin: 3rem auto;
+    }
+    
+}
+
+/* LARGE **/
+@media screen and (min-width: 1100px){
+/** RECIPE PG **/
+    header{
+        width: 95%;
+    }
+    #medteal, #smallteal{
+        display: none;
+    }
+    #largeteal{
+        width: 100%;
+    }
+    main{
+        width: 70%;
+        margin: 2rem auto;
+    }
+    #title{
+        font-size: 2.5rem;
+    }
+    #subtitle{
+        font-size: 1.5rem;
+    }
+    #boxes{
+        display: flex;
+        flex-flow: row;
+        justify-content: space-around;
+        margin: 4rem 0;
+    }
+    
+    .box{
+        box-shadow: 6px 6px 10px lightgray;
+        font-family: cartoonist;
+        font-size: 1.5rem;
+        color: var(--tan);
+        padding: 1rem 2rem;
+        line-height: 1.8rem;
+    }
+    .box h2{
+        font-size: 2rem;
+        line-height: 4rem;
+    }
+    ul {
+        list-style: circle;
+      }
+    #instructions{
+        width: 50%;
+    }
+    #food{
+        width: 70%;
+    }
+    #boxes{
+        max-width: 80%;
+        margin:  4rem auto;
+
+    }
+    #bottom{
+        max-width: 80%;
+        margin: auto;
+    }
+    #header_txt{
+        margin: 0 3rem 0 0;
+    }
+    .info{
+        margin: 0 auto 3rem;
+    }
+
+/* HOME PAGE **/
+    #whirlies{
+    width: 5%;
+    height: 20%;
+    }
+    #header_index{
+        margin: 2rem 5rem 0;
+    }
+    .info{
+        margin: 3rem 3rem 0 .8rem;
+    }
+
+/* HELP **/
+    #help_main{
+        width: 40%;
+        margin: 10% 7rem 30% 7rem;
+    }
+}
+@media screen and (min-width: 2000px){
+    #boxes{
+        max-width: 60%;
+        margin:  4rem auto;
+
+    }
+    #bottom{
+        max-width: 60%;
+        margin: auto;
+    }
+}
