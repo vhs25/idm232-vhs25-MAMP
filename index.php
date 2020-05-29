@@ -56,13 +56,14 @@ if (mysqli_connect_errno()) {
             <a href="help.php" id="help">?</a>
         </header>
         <main id="index">
-            <div id="filter_content">
-                <button class="filters">all</button>
-                <button class="filters">protein</button>
-                <button class="filters">cook time</button>
-                <button class="filters">servings</button>
-                <button class="filters">calories</button>
-            </div>
+            <form method="post" id="filter_content">
+                <button class="filters" name="all">all</button>
+                <button class="filters" name="quick_meal">quick meal</button>
+                <button class="filters" name="low_cal">low cal</button>
+                <button class="filters" name="veg">vegetarian</button>
+                <button class="filters" name="2">serve 2</button>
+                <button class="filters" name="4">serve 4</button>
+            </form>
 
 
 <?php  
@@ -71,9 +72,33 @@ if (isset($_POST['search'])) {
     $query .= "OR `subtitle` LIKE '%$search%'";
     $result = mysqli_query($connection, $query);
 }
+elseif(isset($_POST['quick_meal'])) { 
+    $query = "SELECT * FROM recipes ORDER BY `cook_time` ASC";
+    $result = mysqli_query($connection, $query);
+} 
+elseif(isset($_POST['low_cal'])) { 
+    $query = "SELECT * FROM recipes ORDER BY `calories` ASC";
+    $result = mysqli_query($connection, $query);
+} 
+elseif(isset($_POST['veg'])) { 
+    $query = "SELECT *  FROM `recipes` WHERE `proteine` = 'Vegitarian' ";
+    $result = mysqli_query($connection, $query);
+} 
+elseif(isset($_POST['2'])) { 
+    $query = "SELECT *  FROM `recipes` WHERE `servings` = '2' ";
+    $result = mysqli_query($connection, $query);
+} 
+elseif(isset($_POST['4'])) { 
+    $query = "SELECT *  FROM `recipes` WHERE `servings` = '4' ";
+    $result = mysqli_query($connection, $query);
+} 
+elseif(isset($_POST['all'])) { 
+    $query = "SELECT * FROM recipes";
+    $result = mysqli_query($connection, $query);
+} 
 else {
-$query = "SELECT * FROM recipes";
-$result = mysqli_query($connection, $query);
+    $query = "SELECT * FROM recipes";
+    $result = mysqli_query($connection, $query);
 }
 
 if (!$result) {
