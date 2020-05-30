@@ -89,7 +89,7 @@ elseif(isset($_POST['2'])) {
     $result = mysqli_query($connection, $query);
 } 
 elseif(isset($_POST['4'])) { 
-    $query = "SELECT *  FROM `recipes` WHERE `servings` = '4' ";
+    $query = "SELECT *  FROM `recipes` WHERE `servings` = '9' ";
     $result = mysqli_query($connection, $query);
 } 
 elseif(isset($_POST['all'])) { 
@@ -100,19 +100,18 @@ else {
     $query = "SELECT * FROM recipes";
     $result = mysqli_query($connection, $query);
 }
-
+if($result === FALSE){
+    echo false;
+    ?>
+    <style type="text/css">#no_results_found{
+    display:block;
+    }</style>
+    <?php
+}
 if (!$result) {
     die ("Database query failed.");
-  }
-/*
-    switch($set_row){
-    case isset($_POST['submit']): $search_result;
-    break;
-    case is_null($_POST['submit']): $search;
-    break;
-    default: $set_row = $search;
-    }
-**/
+}
+
     while ($row = mysqli_fetch_assoc($result)){  ?>
     <div class="recipes">
         <a href="recipe.php?id=<?php echo $row['id'];?>">
@@ -131,7 +130,10 @@ if (!$result) {
     </div>
 <?php $current_row++; } ?>
 
-
+<div hidden id="no_results_found">
+<p id="nrf_text">No Results Found.</p>
+        <img src="large/large_sadplate.png" id="nrf_img" alt="girl wearing a mask sitting at a table with an empty plate">
+</div>
 
     </main>
 <script src="script.js"></script>

@@ -255,7 +255,6 @@ option{
 #button:hover, #help:hover{
     background-color: var(--pink);
 }
-
   #filter_content{
     display: flex;
     flex-flow: row wrap;
