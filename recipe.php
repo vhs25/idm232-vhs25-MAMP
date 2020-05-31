@@ -1,28 +1,5 @@
 <?php
-// Step 1: Create Database Connection
-$dbhost = "localhost";
-$dbuser = "root";
-$dbpass = "root";
-$dbname = "idm232";
-$connection = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
-
-// Check the connection is good with no errors
-if (mysqli_connect_errno()) {
-  die ("Database connection failed: " .
-    mysqli_connect_error() .
-    " (" . mysqli_connect_errno() . ")"
-  );
-}
-
-$id = $_GET['id'];
-// Step 2: Preform Database Query
-$query = "SELECT * FROM recipes WHERE id=$id";
-$result = mysqli_query($connection, $query);
-
-// Check there are no errors with our SQL statement
-if (!$result) {
-  die ("Database query failed.");
-}
+require 'includes.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">

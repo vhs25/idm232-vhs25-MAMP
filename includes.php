@@ -1,18 +1,26 @@
 <?php
   
-  define('DB_SERVER', 'localhost');
-  define('DB_USER', 'root');
-  define('DB_PASS', 'root');
-  define('DB_NAME', 'idm232-recipes');
-
-
-  $connection = mysqli_connect(DB_SERVER, DB_USER, DB_PASS, DB_NAME);
-
-  // Test if connection succeeded
-  if (mysqli_connect_errno()) {
-    die ('Database connection failed: ' .
-        mysqli_connect_error() .
-        ' )' . mysqli_connect_errno() . ')'
-    );
+  $host = $_SERVER['HTTP_HOST'];
+  if ($host == 'localhost:8888') {
+    $dbhost = "localhost";
+    $dbuser = "root";
+    $dbpass = "root";
+    $dbname = "idm232";
   }
+  else {
+    $dbhost = "localhost";
+    $dbuser = "vstauffe_idm232";
+    $dbpass = "AHenry108";
+    $dbname = "vstauffe_idm232";
+  }
+  
+  $connection = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
+  
+  if (mysqli_connect_errno()) {
+      die("Database connection failed: " .
+        mysqli_connect_error() .
+        " (" . mysqli_connect_errno() . ")"
+      );
+    }
+  
 ?>
