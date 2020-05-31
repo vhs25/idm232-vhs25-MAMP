@@ -164,11 +164,14 @@ li:first-child{
     top: 60px;
     z-index: -1;
 }
-.recipes{
+.all_recipes{
     justify-content: center;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+}
+.recipes{
+    justify-content: center;
 }
 .tile{
     width: 250px;

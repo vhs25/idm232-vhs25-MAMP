@@ -65,6 +65,7 @@ if (mysqli_connect_errno()) {
                 <button class="filters" name="4">serve 4</button>
             </form>
 
+<section class="all_recipes">
 
 <?php  
 if (isset($_POST['search'])) {
@@ -112,7 +113,6 @@ if (!$result) {
 }
     while ($row = mysqli_fetch_assoc($result)){  ?>
     <div class="recipes">
-    <div>
         <a href="recipe.php?id=<?php echo $row['id'];?>">
         <?php $link_name = "recipe page"; ?>
         <div class="tile">
@@ -127,10 +127,8 @@ if (!$result) {
         </div>
         </a>
     </div>
-    </div>
 <?php $current_row++; } ?>
-
-
+</section>
 <div hidden id="no_results_found">
 <p id="nrf_text">No Results Found.</p>
         <img src="large/large_sadplate.png" id="nrf_img" alt="girl wearing a mask sitting at a table with an empty plate">
