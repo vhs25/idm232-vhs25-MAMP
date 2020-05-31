@@ -89,7 +89,7 @@ elseif(isset($_POST['2'])) {
     $result = mysqli_query($connection, $query);
 } 
 elseif(isset($_POST['4'])) { 
-    $query = "SELECT *  FROM `recipes` WHERE `servings` = '9' ";
+    $query = "SELECT *  FROM `recipes` WHERE `servings` = '4' ";
     $result = mysqli_query($connection, $query);
 } 
 elseif(isset($_POST['all'])) { 
@@ -100,8 +100,7 @@ else {
     $query = "SELECT * FROM recipes";
     $result = mysqli_query($connection, $query);
 }
-if($result === FALSE){
-    echo false;
+if(mysqli_affected_rows($connection)==0){
     ?>
     <style type="text/css">#no_results_found{
     display:block;
@@ -111,9 +110,9 @@ if($result === FALSE){
 if (!$result) {
     die ("Database query failed.");
 }
-
     while ($row = mysqli_fetch_assoc($result)){  ?>
     <div class="recipes">
+    <div>
         <a href="recipe.php?id=<?php echo $row['id'];?>">
         <?php $link_name = "recipe page"; ?>
         <div class="tile">
@@ -128,7 +127,9 @@ if (!$result) {
         </div>
         </a>
     </div>
+    </div>
 <?php $current_row++; } ?>
+
 
 <div hidden id="no_results_found">
 <p id="nrf_text">No Results Found.</p>
