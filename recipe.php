@@ -1,5 +1,13 @@
 <?php
 require 'includes.php';
+
+$id = $_GET['id'];
+$query = "SELECT * FROM recipes WHERE id=$id";
+$result = mysqli_query($connection, $query);
+
+if (!$result) {
+  die ("Database query failed.");
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
