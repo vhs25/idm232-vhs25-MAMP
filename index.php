@@ -19,7 +19,7 @@
     <img src="large/large_longteal.png" alt="teal floral strip" id="largeteal">
     <img src="med/med_teal.png" alt="teal floral strip" id="medteal">
     <img src="small/small_teal.png" alt="teal floral strip" id="smallteal">
-        <header>
+        <header id="header">
             <img src="small/small_whirlies.png" alt="teal loopy lines" id="whirlies">
             <div id="header_index">
                 <h1 id="title">Quarantine Cook</h1>
