@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="232_casestudy.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+    <dv id="hero">
+        <img src="med/sc2.png" alt="small homescreen" class="hero" id="sc1">
+        <img src="med/sc3.png" alt="recipe page" class="hero" id="sc2">
+        <img src="med/sc1.png" alt="large homescreen" class="hero" id="sc3">
+    </dv>
+<main>
+
+    <h1>Quarentine Cook</h1>
+    
+    <div id="head" class="teal">
+    <h2>Created with HTML, CSS, PHP & MySQL</h2>
+    <p>For this project, I created a recipe website. I used PHP and MySql to build a database of recipes and input them into my html website. </p>
+    </div>
+
+    
+    <div>
+    <h3 class="h">The Challenge</h3>
+    <p>This website is a product of my term-long assignment for Scripting II. We were given a library of photos and recipes and instructed to create a "branded web application that would display the recipes and provide a user interface for browsing, searching and filtering through all of the available content." I spent four weeks developing the design and html structure of my site, then 5 weeks to build the database and make everything functional. </p>
+    </div>
+
+    <div class="pink">
+    <h4 class="h">The Design Phase</h4>
+    <p>My first steps in this project were to develop a style guide (including fonts, color schemes and imagery) and wireframe sketches.</p>
+    </div>
+    
+    <div>
+    <img src="styletile.png" alt="My style tile." id="styletile">
+    <p>The floral patterns in my design came from my physical recipe book, which can be found <a href="https://www.amazon.com/gp/product/B01AHV4B6K/ref=ppx_yo_dt_b_search_asin_image?ie=UTF8&th=1" target="_blank">here.</a> I thought it would be fun to connect the two worlds of recipes with this design.</p>
+    </div>
+
+    <div class="purple">
+    <h5 class="h">Wireframe Sketches</h5>
+    <div id="wf">
+    <img src="wireframes/w1.png" alt="wireframe sketch"  class="wf">
+    <img src="wireframes/w2.png" alt="wireframe sketch"  class="wf">
+    <img src="wireframes/w3.png" alt="wireframe sketch"  class="wf">
+    </div>
+    </div>
+
+    <div>
+    <h4 class="h">The Development Phase</h4>
+    <p>You can view my code for this project in my <b><a href="https://github.com/vhs25/idm232-vhs25-MAMP" target="_blank">Github Repository.</a></b>  I also have a <a href="https://github.com/vhs25/idm232-vhs25" target="_blank">repository</a> that was created before my MAMP files. This code isn't as up-to-date, but it shows my work developing the HTML & CSS.</p>
+    </div>
+
+    <div class="teal">
+    <p>The development of my site happened in two phases. The <a href="http://vstauffer.net/idm232/alpha/index.html" target="_blank">first phase</a> was developing the design and structure.  This is essentially the skeleton of my site and where the content from my database is input.</p>
+    <p>For my home page, I wanted to work with a simple tile structure. I added the small flower to spruce up the recipe titles, but otherwise kept it simple for easy reading. In the header, I initially wanted to group all of the navigation together and keep my filters in a dropdown menu, but this wasn't sustainable for all screen sizes (particularly mobile).</p>
+    <p>My main goal for the recipe page was to make both the instructions and ingredients visible at the same time. I find that most recipe websites make users do a lot of scrolling, so I put my two divs side-by-side. Initially I made them scroll individually, but this proved outdated and problematic in  review.</p>
+    </div>
+    
+    <div>
+    <h7 id="fancy">...and now for my <a href="http://vstauffer.net/idm232/final/" target="_blank" id="superfancy">> final! <</a></h7>
+    </div>
+
+    <img src="232_final.gif" alt="gif recording of my recipe website" id="gif">
+<br><br><br><br>
+
+    <div class="pink">
+    <p>My final design structure comes with a few improvements. I broke apart my nav bar and listed out my filters below the heading. This decresed problems in its responsiveness and gave the top of my home page some room to breath. I made improvements to the breakpoints of my responsive CSS to keep the recipe tile sizes consistent. </p>
+    <p>The recipe page got the most exciting improvements. Rather than making the ingredients and instructions scrollable, I made the ingredients sticky so that they would always be displayed as the user scrolls through the instructions. I also gave the flower - which functions as a home button - a fun, spinning animation</p>
+    <p>Most importantly, I built out my site's content and functionality. I created a database for the recipe content in MySQL. Then, using id references in my php code, I was able to pull each recipe into the tiles, categorize them by filter, build a functional search bar and link the recipe details to their own recipe page.</p>
+    </div>
+
+    <div>
+    <h8 class="h">In Yummary...</h8>
+    <div class="purple">
+        <p>I am quite pleased with how my project turned out. It has a warm, ornate vibe and I am pleased with the way it's structured - especially the instructions and ingredients! I was able to meet all of the functional requirements and have successfully set up my first website database. The biggest thing I am learning as I build my first websites is that finding solutions to my problems takes time and patience. Coding can be tedious, but when it's finally complete it feels very rewarding.</p>
+    </div>
+    </div>
+<br><br><br><br>
+</main>
+</body>
+</html>

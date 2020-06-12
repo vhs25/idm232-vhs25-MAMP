@@ -666,7 +666,7 @@ option{
         max-width: 70%;
         margin: auto;
     }
-    #header, main{
+    #header, #index{
         max-width: 70%;
     }
     #header_index{
@@ -686,7 +686,7 @@ option{
         max-width: 60%;
         margin: auto;
     }
-    #header, main{
+    #header, #index{
         max-width: 60%;
     }
 }
@@ -695,7 +695,7 @@ option{
         max-width: 50%;
         margin: auto;
     }
-    #header, main{
+    #header, #index{
         max-width: 50%;
     }
 }
@@ -707,7 +707,7 @@ option{
 }
 
 @media screen and (min-width: 2200px){
-    #header, main{
+    #header, #index{
         max-width: 40%;
     }
     #searchbar{
